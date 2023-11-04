@@ -1,0 +1,134 @@
+.App {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #f3f4f6;
+  padding: 1em;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: auto;
+}
+
+.chatArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  align-items: center;
+  justify-content: space-between; /* push chat towards the bottom */
+}
+
+.chat-input-area {
+  width: 100%; /* Take up full width of the chat area */
+  display: flex; /* Make its children (input and button) sit side-by-side */
+}
+
+
+
+.newChatButton {
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.chat-interface {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 20px;
+  overflow: auto;
+  height: calc(100vh - 2em - 2 * 10px);
+}
+
+.chat-message {
+  max-width: 80%;
+  margin: 5px 0; /* Added vertical margins */
+  padding: 10px;
+  border-radius: 16px;
+  color: white; /* White text color */
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  height: 100vh
+}
+
+.chat-message.user {
+  background-color: #007bff; /* Blue background for user messages */
+  margin-left: auto;
+  height: fit-content;
+  width: fit-content;
+}
+
+.chat-message.llm {
+  background-color: #34c759; /* Green background for bot messages */
+  margin-right: auto;
+  height: fit-content;
+  width: fit-content;
+}
+form {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  align-items: center;
+}
+
+input[type="text"] {
+  flex: 9; /* Allow input to take more space */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+button.sendButton {
+  flex: 1; /* Let the button take less space */
+  padding: 5px 10px;
+  font-size: 14px;
+  max-width: 20%; /* Limit the maximum width of the button */
+}
+
+/* For the session with edit and delete buttons */
+.sessionButton {
+  display: flex;
+  justify-content: space-between; /* Spreads session name and buttons apart */
+  align-items: center;
+  width: 100%;
+}
+
+button.edit, button.delete {
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.session-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.session-content {
+  display: flex;
+  align-items: center;
+}
+
+.session-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;  /* Adjust this value for spacing between buttons */
+}
